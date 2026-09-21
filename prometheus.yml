@@ -1,0 +1,7 @@
+global:
+  - scrape_intervals: 15s
+
+scrape_configs:
+  - job-name: "python-cicd-monitoring"
+    static_configs:
+      - targets: ["app:8083"]
