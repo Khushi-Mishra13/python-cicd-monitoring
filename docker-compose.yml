@@ -12,3 +12,10 @@ services:
       - "./prometheus.yml:/etc/prometheus/prometheus.yml:ro"
     depends_on:
       - app
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
