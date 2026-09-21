@@ -1,5 +1,5 @@
 from flask import Flask
-from prometheus-client import counter, gernerate_latest
+from prometheus_client import Counter, generate_latest
 
 app = Flask(__name__)
 
