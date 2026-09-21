@@ -4,4 +4,6 @@ global:
 scrape_configs:
   - job_name: "python-cicd-monitoring"
     static_configs:
-      - targets: ["app:8083"]
+      - targets: 
+          - "blue:8083"
+          - "green:8083"

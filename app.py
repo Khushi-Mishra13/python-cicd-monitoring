@@ -1,5 +1,6 @@
 from flask import Flask
 from prometheus_client import Counter, generate_latest
+import os
 
 app = Flask(__name__)
 
@@ -9,6 +10,7 @@ REQUEST_COUNT = Counter(
 
 @app.route("/")
 def home() :
+	return f"Hello from the python app running on {os.getenv('APP_COLOR', 'UNKNOWN')}"
 	return "CICD app is running"
 
 @app.route("/health")
